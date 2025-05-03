@@ -1,0 +1,72 @@
+mcc: "001"  # Primary PLMN MCC
+mnc: "01"  # Primary PLMN MNC
+nci: '0x000000010'  # gNB NCI
+idLength: 32  # gNB ID length
+tac: 1  # Tracking Area Code for PLMN 001/01
+linkIp: 10.2.22.89  # gNB IP address for NGAP
+ngapIp: 10.2.22.89  # gNB IP address for NGAP
+gtpIp: 10.2.22.89  # gNB IP address for GTP-U
+
+# AMF configurations
+amfConfigs:
+  - address: 10.2.22.85  # AMF IP address
+    port: 38412  # AMF port
+
+ignoreStreamIds: true
+
+# System information broadcast (true/false)
+systemInfo:
+  broadcast: true
+
+# gNB Search List (list of AMFs that the gNB can contact)
+gnbSearchList:
+  - 10.2.22.85
+
+# Barred flag (used to block the gNB)
+barred: false
+
+# PLMN list configuration
+plmnList:
+  - plmn:
+      mcc: "001"
+      mnc: "01"
+    tac: 1
+
+# Slices configuration
+slices:
+  - sst: 1  # Slice/Service Type for Immersive AR/VR and Cloud Gaming
+    qos:
+      5qi: 9
+      arp: 2
+      priority: 2
+      gbr: 100Mbps  # High throughput
+      mbr: 1Gbps
+      latency: 50ms  # High latency
+      packet_loss: 0.01 # Low packet loss
+  - sst: 2  # Slice/Service Type for Autonomous Vehicles and V2X Communications
+    qos:
+      5qi: 1
+      arp: 1
+      priority: 1
+      gbr: 1Mbps  # Moderate throughput
+      mbr: 3Mbps
+      latency: 0.0001ms  # Ultra-low latency
+      packet_loss: 0.000001 # Minimal packet loss
+  - sst: 3  # Slice/Service Type for Real-Time Control in Smart Manufacturing
+    qos:
+      5qi: 7
+      arp: 10
+      priority: 3
+      gbr: 25Mbps  # Low throughput
+      mbr: 50Mbps
+      latency: 10000ms  # latency
+      packet_loss: 10000 # Tolerable packet loss
+
+# Target gNB configuration file example (gnb2.yaml)
+handover:
+  enabled: true
+  source_gnbs:
+    - gnbId: 2
+      address: 10.2.22.93
+      port: 38412
+
