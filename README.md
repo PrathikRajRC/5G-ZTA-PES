@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-5G-ZTA-PES is a comprehensive implementation of Zero Trust Architecture (ZTA) designed specifically for resource-constrained IoT devices operating in 5G network environments. This framework addresses the security challenges inherent in dynamic 5G networks by removing implicit trust and enforcing continuous authentication for all connected devices.
+Zero Trust Architecture for Securing Smart IoT Devices in 5G Networks is a comprehensive implementation of Zero Trust Architecture (ZTA) designed specifically for resource-constrained IoT devices operating in 5G network environments. This framework addresses the security challenges inherent in dynamic 5G networks by removing implicit trust and enforcing continuous authentication for all connected devices.
 
 ## Key Features
 
