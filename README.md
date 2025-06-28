@@ -1,4 +1,4 @@
-# 5G-ZTA-PES: Zero Trust Architecture for IoT in 5G Networks
+# Zero Trust Architecture for Securing Smart IoT Devices in 5G Networks
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
